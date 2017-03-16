@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.lu.hao.splitbill.SplitBillActivity">
+    <item
+        android:id="@+id/round_nearest_dollar"
+        android:title="Round to nearest dollar"/>
+    <item
+        android:id="@+id/split_tip_evenly"
+        android:title="Split tip evenly"/>
+
+</menu>

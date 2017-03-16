@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Split the Bill</string>
+    <string name="action_settings">Settings</string>
+    <string name="name_input">Name or price</string>
+    <string name="price_input">Price</string>
+    <string name="tax_input">Tax</string>
+    <string name="tip_input">Tip</string>
+    <string name="percent_symbol">%</string>
+    <string name="done_menu">Done</string>
+    <string name="tax_tip_menu">Tax/Tip</string>
+    <string name="imagebutton_desc">Delete button</string>
+    <string name="camera_menu">Capture receipt</string>
+</resources>

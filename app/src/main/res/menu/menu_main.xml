@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.lu.hao.splitbill.MainActivity">
+    <item
+        android:id="@+id/action_camera"
+        android:icon="@drawable/ic_camera_white_48dp"
+        app:showAsAction="always"
+        android:title="@string/camera_menu" />
+
+    <item
+        android:id="@+id/action_done"
+        android:icon="@drawable/ic_arrow_forward_white_24dp"
+        app:showAsAction="always"
+        android:title="@string/done_menu" />
+
+</menu>

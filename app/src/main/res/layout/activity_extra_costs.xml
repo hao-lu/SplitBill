@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view_extra_costs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/subtotal_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="start|center"
+                        android:padding="@dimen/padding_extra_cost_element"
+                        android:text="Subtotal"
+                        android:textSize="@dimen/text_size_extra_cost" />
+
+                    <TextView
+                        android:id="@+id/input_subtotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center|end"
+                        android:padding="@dimen/padding_extra_cost_element"
+                        android:textSize="@dimen/text_size_extra_cost" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/discounts_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/subtotal_row"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="start|center"
+                        android:padding="@dimen/padding_extra_cost_element"
+                        android:text="Discounts"
+                        android:textSize="@dimen/text_size_extra_cost" />
+
+                    <EditText
+                        android:id="@+id/input_discounts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:gravity="end|center"
+                        android:hint="0.00"
+                        android:inputType="numberDecimal"
+                        android:padding="@dimen/padding_extra_cost_element"
+                        android:textSize="@dimen/text_size_extra_cost" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gratuity_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/discounts_row"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="start|center"
+                        android:padding="@dimen/padding_extra_cost_element"
+                        android:text="Included Gratuity"
+                        android:textSize="@dimen/text_size_extra_cost" />
+
+                    <EditText
+                        android:id="@+id/input_gratuity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:gravity="end|center"
+                        android:hint="0.00"
+                        android:inputType="numberDecimal"
+                        android:padding="@dimen/padding_extra_cost_element"
+                        android:textSize="@dimen/text_size_extra_cost" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tip_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gratuity_row"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="start|center"
+                        android:padding="@dimen/padding_extra_cost_element"
+                        android:text="Tip"
+                        android:textSize="@dimen/text_size_extra_cost"
+                        android:id="@+id/textView" />
+
+                    <TextView
+                        android:id="@+id/input_tip"
+                        android:layout_width="@dimen/tax_tip_width"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:gravity="end|center"
+                        android:inputType="numberDecimal"
+                        android:padding="@dimen/padding_extra_cost_element"
+                        android:textSize="@dimen/text_size_extra_cost" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tip_row"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="start|center"
+                        android:padding="@dimen/padding_extra_cost_element"
+                        android:text="Tax"
+                        android:textSize="@dimen/text_size_extra_cost" />
+
+                    <EditText
+                        android:id="@+id/input_tax"
+                        android:layout_width="@dimen/tax_tip_width"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:gravity="end|center"
+                        android:hint="0.00"
+                        android:inputType="numberDecimal"
+                        android:padding="@dimen/padding_extra_cost_element"
+                        android:textSize="@dimen/text_size_extra_cost" />
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardUseCompatPadding="true">
+            <!--android:layout_marginTop="10dp"-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="start|center"
+                    android:padding="@dimen/padding_extra_cost_element"
+                    android:text="Total"
+                    android:textSize="@dimen/text_size_extra_cost" />
+
+                <TextView
+                    android:id="@+id/input_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center|end"
+                    android:padding="@dimen/padding_extra_cost_element"
+                    android:textSize="@dimen/text_size_extra_cost" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+</ScrollView>
